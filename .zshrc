@@ -19,7 +19,7 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 path+=('/home/sultan/.fzf/bin')
-
+path+=('/opt/nvim-linux64/bin')
 # # Add in Powerlevel10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
