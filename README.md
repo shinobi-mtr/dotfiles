@@ -1,5 +1,11 @@
 # My Dotfiles
 
+## SETUP
+
+```sh
+sudo apt install stow zsh
+```
+
 ### STOW
 
 - symlink farm manager
