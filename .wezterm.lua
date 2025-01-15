@@ -1,9 +1,11 @@
 local wezterm = require 'wezterm'
 
+local mux = wezterm.mux
 
-wezterm.on("gui-startup", function()
-  local tab, pane, window = mux.spawn_window{}
-  window:gui_window():maximize()
+wezterm.on('gui-startup', function(window)
+  local tab, pane, window = mux.spawn_window(cmd or {})
+  local gui_window = window:gui_window();
+  gui_window:perform_action(wezterm.action.ToggleFullScreen, pane)
 end)
 
 return {
@@ -12,7 +14,7 @@ return {
         enable_tab_bar = false,
         font_size = 12.0,
         font = wezterm.font('JetBrains Mono'),
-
+        default_prog = { 'wsl', '~' },
         window_background_opacity = 1.0,
         window_decorations = 'RESIZE',
         keys = {
