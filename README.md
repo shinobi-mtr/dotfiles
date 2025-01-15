@@ -1,5 +1,10 @@
 # My Dotfiles
 
+### STOW
+
+- symlink farm manager
+- https://www.youtube.com/watch?v=y6XCebnB9gs
+
 ### ZSH
 
 - https://ohmyz.sh/
