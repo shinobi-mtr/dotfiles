@@ -3,7 +3,7 @@
 ## SETUP
 
 ```sh
-sudo apt install stow zsh
+stow .
 ```
 
 ### STOW
