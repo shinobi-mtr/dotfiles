@@ -1,21 +1,28 @@
-vim.cmd [[packadd packer.nvim]]
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
-return require('packer').startup(function(use)
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+	if vim.v.shell_error ~= 0 then
+		vim.api.nvim_echo({
+			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+			{ out, "WarningMsg" },
+			{ "\nPress any key to exit..." },
+		}, true, {})
+		vim.fn.getchar()
+		os.exit(1)
+	end
+end
 
-  use 'wbthomason/packer.nvim'
-  
-  use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.8',
-	  requires = { {'nvim-lua/plenary.nvim'} }
-  }
+vim.opt.rtp:prepend(lazypath)
 
-  use ("nvim-treesitter/nvim-treesitter", { run= ":TSUpdate" })
-
-  use ("mbbill/undotree")
-
-  use({'neovim/nvim-lspconfig'})
-  use({'hrsh7th/nvim-cmp'})
-  use({'hrsh7th/cmp-nvim-lsp'})
-  
-end)
+require("lazy").setup({
+	{"folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {}},
+	{"nvim-telescope/telescope.nvim", tag = '0.1.8'},
+	{"neovim/nvim-lspconfig"},
+	{"hrsh7th/cmp-nvim-lsp"},
+	{"hrsh7th/nvim-cmp"},
+	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+	{"mbbill/undotree"}
+})
 

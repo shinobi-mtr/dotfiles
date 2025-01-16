@@ -1,9 +1,13 @@
 # My Dotfiles
 
+## REQUIREMENTS
+
+- https://github.com/folke/lazy.nvim
+
 ## SETUP
 
 ```sh
-stow .
+    stow .
 ```
 
 ### STOW

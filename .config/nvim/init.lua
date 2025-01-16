@@ -11,4 +11,6 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.clipboard = "unnamedplus"
 vim.opt.scrolloff = 999
+vim.opt.virtualedit = "block"
+vim.opt.termguicolors = true
 
