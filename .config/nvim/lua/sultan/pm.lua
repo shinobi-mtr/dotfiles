@@ -18,7 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{ import = "sultan.plugins" },
-	{ import = "sultan.plugins.lsp" }
+	-- { import = "sultan.plugins.lsp" }
 },{
 	checker = {enabled = true, notify = false},
 	change_detection = {notify = false}
