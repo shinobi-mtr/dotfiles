@@ -17,12 +17,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{"folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {}},
-	{"nvim-telescope/telescope.nvim", tag = '0.1.8'},
-	{"neovim/nvim-lspconfig"},
-	{"hrsh7th/cmp-nvim-lsp"},
-	{"hrsh7th/nvim-cmp"},
-	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-	{"mbbill/undotree"}
+	{ import = "sultan.plugins" },
+	{ import = "sultan.plugins.lsp" }
+},{
+	checker = {enabled = true, notify = false},
+	change_detection = {notify = false}
 })
-
