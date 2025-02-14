@@ -102,6 +102,11 @@ return {
 					},
 				})
 			end,
+			["elixirls"] = function()
+				lspconfig["elixirls"].setup({
+					cmd = {vim.fn.stdpath("data") .. "/mason/bin/elixir-ls"}
+				})
+			end
 		})
 	end,
 }
