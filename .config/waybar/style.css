@@ -9,7 +9,7 @@
 #waybar {
   background: transparent;
   color: @text;
-  margin: 5px 5px;
+  margin: 5px;
 }
 
 #workspaces {
@@ -34,8 +34,7 @@
 #clock,
 #battery,
 #pulseaudio,
-#custom-lock,
-#custom-power {
+#custom-lock {
   background-color: @surface0;
   padding: 0.5rem 1rem;
   margin: 5px 0;
@@ -43,12 +42,13 @@
 
 #clock {
   color: @blue;
-  border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
+  border-radius: 1rem;
 }
 
 #battery {
   color: @green;
+  margin-right: 1rem;
+  border-radius: 0 1rem 1rem 0;
 }
 
 #battery.charging {
@@ -63,7 +63,7 @@
   color: @yellow;
 }
 
-#backlight, #battery {
+#backlight{
     border-radius: 0;
 }
 
@@ -73,17 +73,8 @@
   margin-left: 1rem;
 }
 
-#custom-music {
-  color: @mauve;
-  border-radius: 1rem;
-}
-
 #custom-lock {
+	margin-right: 1rem;
     border-radius: 1rem;
     color: @lavender;
-}
-
-#tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
 }

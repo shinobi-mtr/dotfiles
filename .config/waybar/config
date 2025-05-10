@@ -4,8 +4,8 @@
     "width": 1920, // Waybar width
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["custom/music"],
-    "modules-right": ["pulseaudio", "backlight", "battery", "clock", "tray", "custom/lock"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "backlight", "battery", "tray", "custom/lock"],
     "hyprland/workspaces": {
          "disable-scroll": true,
          "sort-by-name": true,
@@ -28,7 +28,7 @@
         "max-length": 50
     },
     "clock": {
-        "timezone": "Asia/Dubai",
+        "timezone": "Asia/Riyadh",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": " {:%d/%m/%Y}",
         "format": " {:%H:%M}"
