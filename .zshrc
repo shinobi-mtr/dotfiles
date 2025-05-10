@@ -75,7 +75,6 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # # Aliases
 alias ls='ls --color'
-alias v='nvim'
 alias c='clear'
 
 # # Shell integrations
@@ -83,4 +82,5 @@ eval "$(fzf --zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-if [ "$TMUX" = "" ]; then tmux; fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
