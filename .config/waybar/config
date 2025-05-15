@@ -9,7 +9,7 @@
     "hyprland/workspaces": {
          "disable-scroll": true,
          "sort-by-name": true,
-         "format": " {icon} ",
+         "format": "{id}: {icon}  ",
          "format-icons": {
              "default": "",
          },
@@ -31,11 +31,11 @@
         "timezone": "Asia/Riyadh",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": " {:%d/%m/%Y}",
-        "format": " {:%H:%M}"
+        "format": "{:%H:%M}"
     },
     "backlight": {
         "device": "intel_backlight",
-        "format": "{icon}",
+        "format": "{icon}   {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
@@ -43,7 +43,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}",
+        "format": "{icon}  {capacity}%",
         "format-charging": "",
         "format-plugged": "",
         "format-alt": "{icon}",
@@ -51,7 +51,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
+        "format": "{icon}  {volume}%",
         "format-muted": "",
         "format-icons": {
             "default": ["", "", " "]
