@@ -21,7 +21,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 path+=('/home/sultan/.fzf/bin')
 path+=('/opt/nvim-linux64/bin')
 path+=('/usr/local/go/bin')
-path+=('~/go/bin')
+path+=('/home/sultan/go/bin')
 
 # # Add in Powerlevel10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
@@ -84,3 +84,11 @@ eval "$(fzf --zsh)"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
+export ADB_SERVER_SOCKET=tcp:$WSL_HOST:5037
