@@ -18,12 +18,11 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-path+=('/home/sultan/.fzf/bin')
 path+=('/opt/nvim-linux64/bin')
 path+=('/usr/local/go/bin')
-path+=('/home/sultan/go/bin')
+path+=("$HOME/go/bin")
 path+=("$HOME/.local/bin")
-paht+=("$HOME/.cargo/bin")
+path+=("$HOME/.cargo/bin")
 
 # # Add in Powerlevel10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
