@@ -90,6 +90,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
-export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
-export ADB_SERVER_SOCKET=tcp:$WSL_HOST:5037
