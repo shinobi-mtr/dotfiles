@@ -19,7 +19,7 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 path+=('/opt/nvim-linux64/bin')
-path+=('/opt/zig/bin')
+path+=('/opt/zig/')
 path+=('/usr/local/go/bin')
 path+=("$HOME/go/bin")
 path+=("$HOME/.local/bin")
